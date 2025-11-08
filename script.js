@@ -12,7 +12,6 @@ const nextBtn = document.getElementById('next-video');
 // --- Your video list (replace with real file names) ---
 const videos = [
   'videos/video1.mp4',
-  'videos/video2.mp4'
 ];
 let currentVideo = 0;
 
