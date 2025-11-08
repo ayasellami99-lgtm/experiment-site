@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="consent">
+    <h2>Consent Form</h2>
+    <p>
+      This experiment involves recording your facial expressions via your webcam
+      while you watch short videos. Please confirm your consent below.
+    </p>
+    <button id="consent-yes">I Consent</button>
+  </div>
+
+  <div id="personal-info" class="hidden">
+    <h2>Personal Information</h2>
+    <form id="personal-form">
+      <label>Age: <input type="number" name="age" required></label><br>
+      <label>Gender: 
+        <select name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </label><br>
+      <button type="submit">Next</button>
+    </form>
+  </div>
+
+  <div id="questionnaire" class="hidden">
+    <h2>Questionnaire 1</h2>
+    <p>How do you usually feel in social situations?</p>
+    <label><input type="radio" name="q1" value="1" required> Very Uncomfortable</label><br>
+    <label><input type="radio" name="q1" value="2"> Uncomfortable</label><br>
+    <label><input type="radio" name="q1" value="3"> Neutral</label><br>
+    <label><input type="radio" name="q1" value="4"> Comfortable</label><br>
+    <label><input type="radio" name="q1" value="5"> Very Comfortable</label><br>
+    <button id="start-videos">Next</button>
+  </div>
+
+  <div id="experiment" class="hidden">
+    <h2>Watch the video and rate your reaction</h2>
+    <video id="video" width="480" controls></video>
+    <div id="rating">
+      <p>How much did this video make you laugh?</p>
+      <input type="range" min="1" max="5" id="laugh-scale" />
+      <button id="next-video">Next Video</button>
+    </div>
+    <video id="camera" width="200" autoplay muted></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
